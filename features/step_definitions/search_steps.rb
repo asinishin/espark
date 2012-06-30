@@ -19,7 +19,8 @@ end
 
 Then /^contains the app icon "(.*?)"$/ do |arg1|
   within("div#product_details") do
-    page.should have_content(arg1)
+#    page.should have_content(arg1)
+    page.should have_css("img", :src => arg1)
   end
 end
 

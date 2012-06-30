@@ -1,11 +1,8 @@
 <div id="product_details">
 <p>
-  <b>Track name:</b>
+  <b>App:</b>
   <%= @product.track_name %>
 </p>
 
-<p>
-  <b>Track image:</b>
-  <%= @product.artwork_url_60 %>
-</p>
+  <%= image_tag(@product.artwork_url_60) %>
 </div>

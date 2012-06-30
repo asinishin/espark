@@ -55,7 +55,8 @@ describe ProductsController do
       
       it "shows the icon of 'yelp' app" do
         within("div#product_details") do
-          page.should have_content(samples.last[:artwork_url_60])
+          #page.should have_content(samples.last[:artwork_url_60])
+          page.should have_css("img", :src => samples.last[:artwork_url_60])
         end
       end
     end

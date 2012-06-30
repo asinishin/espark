@@ -11,13 +11,11 @@ ul.token-input-list-facebook {
     min-height: 1px;
     z-index: 999;
     margin-top: 5px;
-    /*    margin-left: 120px; */
     padding: 0;
     background-color: #fff;
     border: 1px solid #ddd;
     list-style-type: none;
-    /*    clear: left; */
-    /* float: left; */
+    clear: left;
 }
 
 ul.token-input-list-facebook li input {
