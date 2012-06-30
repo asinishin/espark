@@ -4,8 +4,8 @@ class ProductsController < ApplicationController
   def index
   end
   
-  def search
-    @product = StoreApi.search_by_name(params[:search][:app_name]).first
+  def lookup
+    @product = StoreApi.lookup_by_id(params[:lookup][:lookup_id])
     render 'index'    
   end
 

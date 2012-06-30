@@ -25,6 +25,12 @@ class Product
       []
     end
   end
+  
+  def self.fill_tag_cache(products)
+    Tag.cache_tags(products) do |product|
+      { tag_id: product.track_id, name: product.track_name }
+    end
+  end
 
   def self.build_dummies
     apps_data = [
@@ -64,7 +70,7 @@ class Product
 
   def self.dummy_search_by_name_example(name_example)
     apps = build_dummies
-    apps.inject([]) { |result, app| app.track_name.downcase =~ /name_example.downcase/ ? result << app : result }
+    apps.inject([]) { |result, app| app.track_name.downcase.include?(name_example.downcase) ? result << app : result }
   end
 
   def self.dummy_search_by_id(track_id)

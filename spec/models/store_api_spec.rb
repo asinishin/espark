@@ -28,23 +28,18 @@ describe StoreApi do
   end
 
   describe "app search" do
-    it "should find an app by name" do
-      app = StoreApi.search_by_name(@samples.first[:track_name]).first
-      app.artwork_url_60.should == @samples.first[:artwork_url_60]
-    end
-
-    it "should find several apps by name example" do
-      apps = StoreApi.search_by_name_example('yel')
-      apps.each do |app|
-        app.track_name.should =~ /yel/i
+    it "should find several app tags by name example" do
+      tags = StoreApi.search_tags_by_example('yel')
+      tags.each do |tag|
+        tag.name.should =~ /yel/i
       end
     end
 
-    it "should not return apps wich names are not matched with example" do
-      apps = StoreApi.search_by_name_example('yel')
-      apps.each do |app|
+    it "should not return app tags wich names are not matched with example" do
+      tags = StoreApi.search_tags_by_example('yel')
+      tags.each do |tag|
         @samples.each do |sample|
-          sample[:track_name].should_not == app.track_name unless sample[:track_name] =~ /yel/i
+          sample[:track_name].should_not == tag.name unless sample[:track_name] =~ /yel/i
         end
       end
     end

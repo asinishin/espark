@@ -1,10 +1,9 @@
 Espark::Application.routes.draw do
   resources :products, :only => :index do
     collection do
-      post 'search'
+      post 'lookup'
     end
-  end
-    
+  end    
     
 
   # The priority is based upon order of creation:
