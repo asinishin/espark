@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe StoreApi do
 
-  before(:each) do
-    @samples = [
+  let!(:samples) do
+    samples = [
       {
         track_id:       "456191378",
         track_name:     "forkly",
@@ -13,12 +13,12 @@ describe StoreApi do
         track_id:       "284945674",
         track_name:     "iWant",
         artwork_url_60: "http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png"
-      },
+        },
       {
         track_id:       "449991112",
         track_name:     "YellowPages - Mobile Yellow Pages",
         artwork_url_60: "http://a2.mzstatic.com/us/r1000/065/Purple/70/d3/10/mzi.watmijse.png"
-      },
+        },
       {
         track_id:       "284910350",
         track_name:     "Yelp",
@@ -38,7 +38,7 @@ describe StoreApi do
     it "should not return app tags wich names are not matched with example" do
       tags = StoreApi.search_tags_by_example('yel')
       tags.each do |tag|
-        @samples.each do |sample|
+        samples.each do |sample|
           sample[:track_name].should_not == tag.name unless sample[:track_name] =~ /yel/i
         end
       end
@@ -49,13 +49,13 @@ describe StoreApi do
     use_vcr_cassette
 
     it "should look up an app by ID" do
-      app = StoreApi.lookup_by_id(@samples.first[:track_id])
-      app.track_name.should == @samples.first[:track_name]
-      app.artwork_url_60.should == @samples.first[:artwork_url_60]
+      app = StoreApi.lookup_by_id(samples.first[:track_id])
+      app.track_name.should == samples.first[:track_name]
+      app.artwork_url_60.should == samples.first[:artwork_url_60]
     end
 
     it "should return only the one app" do
-      apps = StoreApi.lookup_by_id(@samples.first[:track_id])
+      apps = StoreApi.lookup_by_id(samples.first[:track_id])
       apps.respond_to?(:size).should_not be_true
     end
   end
