@@ -13,8 +13,8 @@ require 'cucumber/rails'
 Capybara.default_selector = :css
 
 # set javascript driver for capybara
-Capybara.javascript_driver = :selenium
-#Capybara.javascript_driver = :webkit
+#Capybara.javascript_driver = :selenium
+Capybara.javascript_driver = :webkit
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
