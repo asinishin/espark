@@ -1,5 +1,5 @@
 Given /^the following apps:$/ do |table|
-  @app_names = table.hashes
+  @apps = table.hashes
 end
 
 When /^user submitted an app name "(.*?)" for search$/ do |arg1|
@@ -17,5 +17,7 @@ Then /^contains the app icon "(.*?)"$/ do |arg1|
 end
 
 Then /^it should not contain other apps except of "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  @apps.each do |app|
+    page.should have_no_content(app['Track Name']) unless app['Track Name'] == arg1
+  end
 end
