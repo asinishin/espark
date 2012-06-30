@@ -10,7 +10,7 @@ Feature: User search for an app inside the iOS app store
         | forkly     |
         | iWant      |
         When user submitted an app name "<Track Name>" for search
-        Then he can see the result that contains tbe app name "<Track Name>"
+        Then he can see the result that contains the app name "<Track Name>"
         And contains the app icon "<Artwork Url 60>"
         And it should not contain other apps except of "<Track Name>"
         

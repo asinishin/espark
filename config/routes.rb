@@ -1,5 +1,5 @@
 Espark::Application.routes.draw do
-  resources :products do
+  resources :products, :only => :index do
     collection do
       post 'search'
     end

@@ -8,7 +8,7 @@ When /^user submitted an app name "(.*?)" for search$/ do |arg1|
   click_button 'Search'
 end
 
-Then /^he can see the result that contains tbe app name "(.*?)"$/ do |arg1|
+Then /^he can see the result that contains the app name "(.*?)"$/ do |arg1|
   page.should have_content(arg1)
 end
 
