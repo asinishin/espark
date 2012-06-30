@@ -3,7 +3,7 @@ require 'spec_helper'
 describe StoreApi do
 
   before(:each) do
-    @apps = [
+    @samples = [
       {
         track_id:       "456191378",
         track_name:     "forkly",
@@ -13,31 +13,47 @@ describe StoreApi do
         track_id:       "284945674",
         track_name:     "iWant",
         artwork_url_60: "http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png"
+      },
+      {
+        track_id:       "284910350",
+        track_name:     "Yelp",
+        artwork_url_60: "http://a2.mzstatic.com/us/r1000/073/Purple/v4/ec/ba/57/ecba5736-8bf9-2f5f-fced-02d49ec15d41/57.png"
       }
     ]
   end
 
   describe "app search" do
-    it "should find an app" do
-      app = StoreApi.search_by_name(@apps.first[:track_name]).first
-      app.artwork_url_60.should == @apps.first[:artwork_url_60]
+    it "should find an app by name" do
+      app = StoreApi.search_by_name(@samples.first[:track_name]).first
+      app.artwork_url_60.should == @samples.first[:artwork_url_60]
     end
 
-    it "should return only the one found app" do
-      apps = StoreApi.search_by_name(@apps.first[:track_name])
-      apps.size.should == 1
+    it "should find several apps by name example" do
+      apps = StoreApi.search_by_name_example('y')
+      apps.each do |app|
+        app.track_name.should =~ /y/i
+      end
+    end
+
+    it "should not return apps wich names are not matched with example" do
+      apps = StoreApi.search_by_name_example('y')
+      apps.each do |app|
+        @samples.each do |sample|
+          sample[:track_name].should_not == app.track_name unless sample[:track_name] =~ /y/i
+        end
+      end
     end
   end
 
   describe "app look up" do
     it "should look up an app by ID" do
-      app = StoreApi.lookup_by_id(@apps.first[:track_id])
-      app.track_name.should == @apps.first[:track_name]
-      app.artwork_url_60.should == @apps.first[:artwork_url_60]
+      app = StoreApi.lookup_by_id(@samples.first[:track_id])
+      app.track_name.should == @samples.first[:track_name]
+      app.artwork_url_60.should == @samples.first[:artwork_url_60]
     end
 
     it "should return only the one app" do
-      apps = StoreApi.lookup_by_id(@apps.first[:track_id])
+      apps = StoreApi.lookup_by_id(@samples.first[:track_id])
       apps.respond_to?(:size).should_not be_true
     end
   end

@@ -30,6 +30,11 @@ class Product
     apps.inject([]) { |result, app| app.track_name == track_name ? result << app : result }
   end
 
+  def self.dummy_search_by_name_example(name_example)
+    apps = build_dummies
+    apps.inject([]) { |result, app| app.track_name.downcase =~ /name_example.downcase/ ? result << app : result }
+  end
+
   def self.dummy_search_by_id(track_id)
     apps = build_dummies    
     apps.find { |app| app.track_id == track_id }
