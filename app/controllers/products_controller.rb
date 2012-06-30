@@ -11,7 +11,9 @@ class ProductsController < ApplicationController
   
   def list
     sample = params[:q]
-    render :json => [{:name => "Aoas", :id => 1}, {:name => "Bogus", :id => 2}]
+    render :json => StoreApi.search_tags_by_example(sample).map do |tag|
+      { name: tag.name, id: tag.tag_id }
+    end
   end
 
 end

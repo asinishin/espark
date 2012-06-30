@@ -37,7 +37,7 @@ describe ProductsController do
       it "shows product names that contain characters 'yel'" do
         within(".token-input-dropdown-facebook") do
           samples.each do |sample|
-            page.should have_content(sample[:track_name]) if sample[:track_name] =~ /yel/i
+            page.should have_content(sample[:track_name].first(15).downcase) if sample[:track_name] =~ /yel/i
           end          
         end
       end      
