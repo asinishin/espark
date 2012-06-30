@@ -49,13 +49,13 @@ describe StoreApi do
     use_vcr_cassette
 
     it "should look up an app by ID" do
-      app = StoreApi.lookup_by_id(samples.first[:track_id])
-      app.track_name.should == samples.first[:track_name]
-      app.artwork_url_60.should == samples.first[:artwork_url_60]
+      app = StoreApi.lookup_by_id(samples.last[:track_id])
+      app.track_name.should == samples.last[:track_name]
+      app.artwork_url_60.should == samples.last[:artwork_url_60]
     end
 
     it "should return only the one app" do
-      apps = StoreApi.lookup_by_id(samples.first[:track_id])
+      apps = StoreApi.lookup_by_id(samples.last[:track_id])
       apps.respond_to?(:size).should_not be_true
     end
   end

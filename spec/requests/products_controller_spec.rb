@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ProductsController do
   
-  describe "product search auto options", :js => true do    
+  describe "app search auto options", :js => true do    
     let!(:samples) do
       samples = [
         {
@@ -34,13 +34,30 @@ describe ProductsController do
         fill_in 'token-input-lookup_options', :with => 'yel'
       end      
       
-      it "shows product names that contain characters 'yel'" do
+      it "shows app names that contain characters 'yel'" do
         within(".token-input-dropdown-facebook") do
           samples.each do |sample|
             page.should have_content(sample[:track_name].first(15).downcase) if sample[:track_name] =~ /yel/i
           end          
         end
+      end
+    end
+
+    context "with name 'yelp' selected in the list" do
+      use_vcr_cassette
+
+      before(:each) do
+        visit('/products')
+        fill_in 'token-input-lookup_options', :with => 'yel'
+        sleep 1
+        find("li:contains('yelp')").click
       end      
+      
+      it "shows the icon of 'yelp' app" do
+        within("product_details") do
+          page.should have_content(samples[3][:artwork_url_60])
+        end
+      end
     end
   end 
 

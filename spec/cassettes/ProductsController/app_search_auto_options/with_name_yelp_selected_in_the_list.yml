@@ -1,0 +1,40 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?id=
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-timing-app:
+      - 1 ms
+      x-apple-orig-url-path:
+      - /lookup?id=
+      x-apple-translated-wo-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?id=
+      x-apple-application-site:
+      - NWK
+      x-apple-max-age:
+      - '3600'
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '1020009'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=55
+      date:
+      - Sat, 30 Jun 2012 18:19:04 GMT
+      content-length:
+      - '42'
+      connection:
+      - keep-alive
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":0,\n \"results\": []\n}\n\n\n"
+    http_version: '1.1'
