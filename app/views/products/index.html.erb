@@ -1,10 +1,29 @@
 <h1>Listing products</h1>
 
-<%= form_for(:lookup, :url => lookup_products_path) do |f| %>
-  <strong>Search application: </strong>
-  <%= f.select(:lookup_id, search_options, { :include_blank => true }) %>
-  <%= f.submit 'Search', :html => "style='float:left'"%>
+<%= form_for(:lookup, :url => lookup_products_path, :html => {:id => "search_form"}) do |f| %>
+  <b>Search application:</b>
+  <%= f.text_field :options %>
   <div style='clear:both'></div>
 <% end %>
 
 <%= render :partial => "show" unless @product.nil? %>
+
+<script>
+$(function() {
+  $("#lookup_options").tokenInput("/products/list.json", {
+    crossDomain: false,
+    theme: "facebook",
+    minChars: 1,
+    tokenLimit: 1,
+    searchDelay: 200,
+    onAdd: function (item) {
+      $("#search_form").submit();
+    }, 
+    prePopulate: $("#lookup_options").data("pre"),
+    preventDuplicates: true,
+    hintText: "Enter name",
+    noResultsText: "Not found!",
+    searchingText: "Searching..."
+  });
+});
+</script>

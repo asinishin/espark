@@ -2,6 +2,7 @@ Espark::Application.routes.draw do
   resources :products, :only => :index do
     collection do
       post 'lookup'
+      get  'list'
     end
   end    
     

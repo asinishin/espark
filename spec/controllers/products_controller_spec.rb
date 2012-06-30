@@ -8,7 +8,7 @@ describe ProductsController do
       before(:each) do
       end      
       
-      it "shows product names contained characters 'yel'" do
+      it "shows product names which containe characters 'yel'" do
         
       end
       
