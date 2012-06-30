@@ -1,0 +1,23 @@
+development: &development
+  adapter: mysql2
+  host: localhost
+  username: ruby
+  password: 
+  database: espark_developement
+
+test: &test
+  adapter: mysql2
+  host: localhost
+  username: ruby
+  password: 
+  database: espark_test
+
+production:
+  adapter: mysql2
+  host: localhost
+  username: ruby
+  password: 
+  database: espark_production
+
+cucumber:
+  <<: *test
