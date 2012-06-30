@@ -13,6 +13,7 @@ The application does not use DB, so you should run only:
 Run:
 
 #cucumber
+
 #rspec
 
 == Launch
