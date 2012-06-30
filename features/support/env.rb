@@ -13,7 +13,8 @@ require 'cucumber/rails'
 Capybara.default_selector = :css
 
 # set javascript driver for capybara
-Capybara.javascript_driver = :selenium
+#Capybara.javascript_driver = :selenium
+Capybara.javascript_driver = :webkit
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
@@ -58,5 +59,5 @@ end
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
-Cucumber::Rails::Database.javascript_strategy = :truncation
+Cucumber::Rails::Database.javascript_strategy = :truncation, {:except => %w[products]}
 

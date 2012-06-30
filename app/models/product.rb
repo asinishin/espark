@@ -1,3 +1,3 @@
 class Product < ActiveRecord::Base
-  attr_accessible :seller_name, :track_name, :trackid
+  attr_accessible :track_name, :artwork_url_60
 end

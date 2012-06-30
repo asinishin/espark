@@ -2,9 +2,8 @@
 
 <table>
   <tr>
-    <th>Trackid</th>
     <th>Track name</th>
-    <th>Seller name</th>
+    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +11,8 @@
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= product.trackid %></td>
     <td><%= product.track_name %></td>
-    <td><%= product.seller_name %></td>
+    <td><%= product.artwork_url_60 %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>

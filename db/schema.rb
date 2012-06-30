@@ -14,11 +14,10 @@
 ActiveRecord::Schema.define(:version => 20120629231215) do
 
   create_table "products", :force => true do |t|
-    t.string   "trackid"
     t.string   "track_name"
-    t.string   "seller_name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "artwork_url_60"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

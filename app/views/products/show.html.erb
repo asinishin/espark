@@ -1,20 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Trackid:</b>
-  <%= @product.trackid %>
-</p>
-
-<p>
   <b>Track name:</b>
   <%= @product.track_name %>
 </p>
 
 <p>
-  <b>Seller name:</b>
-  <%= @product.seller_name %>
+  <b>Track name:</b>
+  <%= @product.artwork_url_60 %>
 </p>
-
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
