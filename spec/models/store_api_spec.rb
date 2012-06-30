@@ -15,6 +15,11 @@ describe StoreApi do
         artwork_url_60: "http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png"
       },
       {
+        track_id:       "449991112",
+        track_name:     "YellowPages - Mobile Yellow Pages",
+        artwork_url_60: "http://a2.mzstatic.com/us/r1000/065/Purple/70/d3/10/mzi.watmijse.png"
+      },
+      {
         track_id:       "284910350",
         track_name:     "Yelp",
         artwork_url_60: "http://a2.mzstatic.com/us/r1000/073/Purple/v4/ec/ba/57/ecba5736-8bf9-2f5f-fced-02d49ec15d41/57.png"
@@ -29,17 +34,17 @@ describe StoreApi do
     end
 
     it "should find several apps by name example" do
-      apps = StoreApi.search_by_name_example('y')
+      apps = StoreApi.search_by_name_example('yel')
       apps.each do |app|
-        app.track_name.should =~ /y/i
+        app.track_name.should =~ /yel/i
       end
     end
 
     it "should not return apps wich names are not matched with example" do
-      apps = StoreApi.search_by_name_example('y')
+      apps = StoreApi.search_by_name_example('yel')
       apps.each do |app|
         @samples.each do |sample|
-          sample[:track_name].should_not == app.track_name unless sample[:track_name] =~ /y/i
+          sample[:track_name].should_not == app.track_name unless sample[:track_name] =~ /yel/i
         end
       end
     end
