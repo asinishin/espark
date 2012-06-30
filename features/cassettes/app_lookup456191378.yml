@@ -1,0 +1,76 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?id=456191378
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-timing-app:
+      - 90 ms
+      x-apple-orig-url-path:
+      - /lookup?id=456191378
+      x-apple-translated-wo-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?id=456191378
+      x-apple-application-site:
+      - NWK
+      x-apple-max-age:
+      - '3600'
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '3020004'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=59
+      date:
+      - Sat, 30 Jun 2012 13:42:48 GMT
+      content-length:
+      - '3295'
+      connection:
+      - keep-alive
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"kind\":\"software\",
+      \"features\":[], \"supportedDevices\":[\"all\"], \"isGameCenterEnabled\":false,
+      \n\"screenshotUrls\":[\"http://a5.mzstatic.com/us/r1000/106/Purple/v4/cf/ab/66/cfab6663-efb0-efc9-ab5d-61442fc7aed4/mza_5237453635288916779.png\",
+      \"http://a2.mzstatic.com/us/r1000/113/Purple/v4/d4/85/ef/d485effa-3ad1-4689-d3aa-08455d1cec4c/mzl.tvjjpyvo.png\",
+      \"http://a1.mzstatic.com/us/r1000/076/Purple/v4/d1/2a/33/d12a33d4-c6bd-412f-b5ac-8a559fbad485/mza_637618084958870145.png\",
+      \"http://a5.mzstatic.com/us/r1000/064/Purple/v4/87/6e/89/876e894d-c6a4-2a21-7f7e-3f5259d37c22/mza_961743700311399859.png\",
+      \"http://a4.mzstatic.com/us/r1000/119/Purple/v4/28/ed/67/28ed6705-fb18-0aa5-1953-affc3cb28571/mzl.bzornvzs.png\"],
+      \"ipadScreenshotUrls\":[], \"artworkUrl60\":\"http://a2.mzstatic.com/us/r1000/116/Purple/v4/da/75/b8/da75b8b8-e070-e7c0-805f-10f5f37123a7/Icon.png\",
+      \"artworkUrl512\":\"http://a3.mzstatic.com/us/r1000/109/Purple/v4/61/dc/30/61dc3023-e98d-b5f0-45d0-f0460a87b09c/mzl.jlajoxxx.png\",
+      \"artistViewUrl\":\"http://itunes.apple.com/us/artist/forkly/id456191385?uo=4\",
+      \"artistId\":456191385, \"artistName\":\"forkly\", \"price\":0.00, \"version\":\"2.1\",
+      \n\"description\":\"Forkly is a beautiful way to share and discover tastes.
+      We\\u2019ll help you discover a new dish around the corner, the best burger
+      in town or your favorite cocktail bar in a new city.\\n\\n★ Apple App Store
+      Essentials for Foodies\\n★ iPhone App of the Week in the UK (September 2011)
+      \\n★ New and Noteworthy in the US (February 2012) \\n\\nWith Forkly you can\\u2026\\n\\n\\u2022
+      See whats good at a particular restaurant or bar. \\n\\u2022 Discover tasty
+      items and good restaurants by following others tastes.\\n\\u2022 \\u201cWant\\u201d
+      items and easily find them later when you\\u2019re hungry.\\n\\u2022 Share your
+      tastes to Twitter, Facebook, Email and MMS.\\n\\u2022 Share photos of your food/drink
+      and let others know where to find it. \\n\\u2022 Earn influence points, become
+      a top influencer for places and items.\\n\\nLearn more: http://forkly.com\",
+      \"genreIds\":[\"6012\", \"6003\"], \"releaseDate\":\"2011-08-23T07:00:00Z\",
+      \"sellerName\":\"forkly inc.\", \"currency\":\"USD\", \"genres\":[\"Lifestyle\",
+      \"Travel\"], \"bundleId\":\"com.forkly.forkly\", \"trackId\":456191378, \"trackName\":\"forkly\",
+      \"primaryGenreName\":\"Lifestyle\", \"primaryGenreId\":6012, \n\"releaseNotes\":\"✓
+      Photo filters specifically designed for food (candlelit dinners included!)\\n✓
+      Photo effects: Tilt-shift and enhance images\\n✓ Invite friends\\n✓ Settings:
+      Save photos to albums \\n✓ Share Tastemaker status on Twitter & Facebook\\n✓
+      View places where you're the Tastemaker\\n✓ Wine.com integration: Buy wine you
+      find on Forkly\\n✓ Improved Featured Users section\\n✓ Enhancements: User interface
+      & speed\\n✓ Bug fixes\", \"wrapperType\":\"software\", \"trackCensoredName\":\"forkly\",
+      \"languageCodesISO2A\":[\"EN\"], \"fileSizeBytes\":\"7805587\", \"sellerUrl\":\"http://forkly.com\",
+      \"contentAdvisoryRating\":\"12+\", \"averageUserRatingForCurrentVersion\":4.5,
+      \"userRatingCountForCurrentVersion\":20, \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/109/Purple/v4/61/dc/30/61dc3023-e98d-b5f0-45d0-f0460a87b09c/mzl.jlajoxxx.png\",
+      \"trackViewUrl\":\"http://itunes.apple.com/us/app/forkly/id456191378?mt=8&uo=4\",
+      \"trackContentRating\":\"12+\", \"averageUserRating\":4.5, \"userRatingCount\":283}]\n}\n\n\n"
+    http_version: '1.1'
