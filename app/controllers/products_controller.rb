@@ -9,6 +9,11 @@ class ProductsController < ApplicationController
       format.json { render json: @products }
     end
   end
+  
+  def search
+    @products = Product.all
+    render 'index'    
+  end
 
   # GET /products/1
   # GET /products/1.json

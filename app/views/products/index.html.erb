@@ -1,5 +1,12 @@
 <h1>Listing products</h1>
 
+<%= form_for(:search, :url => search_products_path) do |f| %>
+  <strong>Search application: </strong>
+  <input id='search_app_name' name='search[app_name]' type='text' style='margin:10px; width:160px;' />
+  <%= f.submit 'Search', :html => "style='float:left'"%>
+  <div style='clear:both'></div>
+<% end %>
+
 <table>
   <tr>
     <th>Track name</th>
