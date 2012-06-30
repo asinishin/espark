@@ -5,10 +5,10 @@ Feature: User search for an app inside the iOS app store
 
     @javascript
     Scenario Outline: User successfully found an app
-        Given the following apps:
-        | Track Name |
-        | forkly     |
-        | iWant      |
+        Given the following app tags:
+        | Track Name | Track ID  |
+        | forkly     | 456191378 |
+        | iWant      | 284945674 |
         When user submitted an app name "<Track Name>" for search
         Then he can see the result that contains the app name "<Track Name>"
         And contains the app icon "<Artwork Url 60>"
