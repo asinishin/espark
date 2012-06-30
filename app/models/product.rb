@@ -11,7 +11,7 @@ class Product
     end
   end
 
-  def self.dummy_search_by_name(track_name)
+  def self.build_dummies
     apps = []
     apps << new({
       trackId: '456191378',
@@ -23,7 +23,16 @@ class Product
       trackName: 'iWant',
       artworkUrl60: 'http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png'
     }.to_json)
+  end
+
+  def self.dummy_search_by_name(track_name)
+    apps = build_dummies
     apps.inject([]) { |result, app| app.track_name == track_name ? result << app : result }
+  end
+
+  def self.dummy_search_by_id(track_id)
+    apps = build_dummies    
+    apps.find { |app| app.track_id == track_id }
   end
 
 end
