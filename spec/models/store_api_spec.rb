@@ -51,6 +51,8 @@ describe StoreApi do
   end
 
   describe "app look up" do
+    use_vcr_cassette
+
     it "should look up an app by ID" do
       app = StoreApi.lookup_by_id(@samples.first[:track_id])
       app.track_name.should == @samples.first[:track_name]
