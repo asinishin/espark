@@ -4,11 +4,10 @@ end
 
 When /^user submitted an app name "(.*?)" for search$/ do |arg1|
   visit '/products'
-  select  arg1.downcase,   :from => 'lookup_lookup_id'
-#  fill_in 'search_app_name', :with => arg1
-
+  fill_in 'token-input-lookup_options', :with => arg1.first(3).downcase
+  sleep 1
   VCR.use_cassette("app_lookup" + tag_id_by_name(@app_tags, arg1)) do
-    click_button 'Search'
+    find("li:contains('#{arg1.downcase}')").click
   end
 end
 
