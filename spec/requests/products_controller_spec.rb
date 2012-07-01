@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "ProductsController" do
   
   describe "app search auto options", :js => true do    
+    extend DataFactory
 
     prepare_product_samples
 
