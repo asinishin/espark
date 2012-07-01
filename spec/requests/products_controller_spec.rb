@@ -1,10 +1,9 @@
 require 'spec_helper'
 
-describe "ProductsController" do
+describe ProductsController do
   
   describe "app search auto options", :js => true do    
     extend DataFactory
-
     prepare_product_samples
 
     before(:each) do
@@ -17,7 +16,7 @@ describe "ProductsController" do
       it "shows app names that contain characters 'yel'" do
         within(".token-input-dropdown-facebook") do
           product_samples.each do |sample|
-            page.should have_content(sample[:track_name].first(15).downcase) if sample[:track_name] =~ /yel/i
+            page.should have_content(sample[:track_name].first(15).downcase) if sample[:track_name].downcase.include?(characters_entered)
           end          
         end
       end
