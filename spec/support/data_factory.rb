@@ -11,6 +11,8 @@ module DataFactory
     let(:expected_list) do
       Product.fill_tag_cache(FakeProduct.dummy_search_by_name_example(characters_entered))
     end
+    
+    let(:favorite_product) { Product.new(product_samples.last) }
   end
 
 end

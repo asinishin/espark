@@ -24,7 +24,7 @@ describe ProductsController do
 
     context "with name 'yelp' selected in the list" do
       before(:each) do
-        StoreApi.should_receive(:lookup_by_id).with(product_samples.last[:track_id]).and_return(Product.new(product_samples.last))
+        StoreApi.should_receive(:lookup_by_id).with(favorite_product.track_id).and_return(favorite_product)
       end      
       
       it "shows the icon of 'yelp' app" do
@@ -32,7 +32,7 @@ describe ProductsController do
         find("li:contains('yelp')").click
 
         within("div#product_details") do
-          page.should have_css("img", :src => product_samples.last[:artwork_url_60])
+          page.should have_css("img", :src => favorite_product.artwork_url_60)
         end
       end
     end
