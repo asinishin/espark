@@ -30,6 +30,7 @@ class Product
     Tag.cache_tags(products) do |product|
       { tag_id: product.track_id, name: product.track_name }
     end
+    Tag.all
   end
 
   def self.build_dummies
