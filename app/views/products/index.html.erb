@@ -1,9 +1,19 @@
-<h1>Listing products</h1>
-
-<%= form_for(:lookup, :url => lookup_products_path, :html => {:id => "search_form"}) do |f| %>
-  <b>Search application:</b>
-  <%= f.text_field :options %>
-  <div style='clear:both'></div>
+<% title = "Apple Store" %>
+<% content_for :title do title end %>
+<% content_for :red_line do %>
+	<div class="row">
+    <h1 class="span4 pull-left"><%= title %></h1>
+  </div>
+  <legend>Small Vendor Affiliate</legend>
 <% end %>
 
-<%= render :partial => "show" unless @product.nil? %>
+<div class='row'>
+  <%= form_for(:lookup, :url => lookup_products_path, :html => {:id => "search_form", :class =>"well span3"}) do |f| %>
+  <label>Search app</label>
+    <%= f.text_field :options %>
+  <% end %>
+  <div class='span8'>
+    <%= render :partial => "show" unless @product.nil? %>
+  </div>
+</div>
+
