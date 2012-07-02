@@ -9,4 +9,20 @@
   <p><%=raw sanitize(simple_format(@product.description), :tags => %w(br p) ) %></p>
   
   <h3>Screenshots</h3>
+  <p></p>
+  <div id="screenshots" class="carousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <% unless @product.screenshot_urls.nil? || test? %>
+        <% @product.screenshot_urls.each_with_index do |shot_url, i| %>
+          <div class=<%= i == 0 ? "'active item'" : "'item'" %>>
+            <%= image_tag(shot_url) %>
+          </div>        
+        <% end %>
+      <% end %>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#screenshots" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#screenshots" data-slide="next">&rsaquo;</a>
+  </div>
 </div>

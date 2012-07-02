@@ -1,13 +1,14 @@
 class Product
-  attr_accessor :track_id, :track_name, :artwork_url_60, :description
+  attr_accessor :track_id, :track_name, :artwork_url_60, :description, :screenshot_urls
   
   def initialize(attrs=nil)
     super()
     unless attrs.nil?
-      @track_id       = attrs[:track_id]
-      @track_name     = attrs[:track_name]
-      @artwork_url_60 = attrs[:artwork_url_60]
-      @description    = attrs[:description]
+      @track_id        = attrs[:track_id]
+      @track_name      = attrs[:track_name]
+      @artwork_url_60  = attrs[:artwork_url_60]
+      @description     = attrs[:description]
+      @screenshot_urls = attrs[:screenshot_urls]
     end
   end
   
@@ -16,7 +17,8 @@ class Product
       track_id: @track_id,
       track_name: @track_name,
       artwork_url_60: @artwork_url_60,
-      description: @description
+      description: @description,
+      screenshot_urls: @screenshot_urls
     }
   end
 
@@ -32,11 +34,12 @@ class Product
     unless apps_data['resultCount'].nil?
       apps_data = apps_data['results']
       apps_data.map do |attrs|
-        self.new(
-          track_id:       attrs['trackId'],
-          track_name:     attrs['trackName'],
-          artwork_url_60: attrs['artworkUrl60'],
-          description:    attrs['description']
+        new(
+          track_id:        attrs['trackId'],
+          track_name:      attrs['trackName'],
+          artwork_url_60:  attrs['artworkUrl60'],
+          description:     attrs['description'],
+          screenshot_urls: attrs['screenshotUrls']
         )
       end
     else

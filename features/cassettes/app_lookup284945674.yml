@@ -11,7 +11,7 @@
       message: OK
     headers:
       x-apple-timing-app:
-      - 9 ms
+      - 11 ms
       x-apple-orig-url-path:
       - /lookup?id=284945674
       x-apple-translated-wo-url:
@@ -23,13 +23,13 @@
       content-type:
       - text/javascript; charset=utf-8
       x-apple-application-instance:
-      - '2045002'
+      - '2057008'
       x-webobjects-loadaverage:
       - '0'
       cache-control:
-      - no-transform, max-age=55
+      - no-transform, max-age=60
       date:
-      - Sat, 30 Jun 2012 13:42:49 GMT
+      - Mon, 02 Jul 2012 12:17:00 GMT
       content-length:
       - '3352'
       connection:
@@ -38,12 +38,12 @@
       - origin.0
     body: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"kind\":\"software\",
       \"features\":[], \"supportedDevices\":[\"all\"], \"isGameCenterEnabled\":false,
+      \"artistViewUrl\":\"http://itunes.apple.com/us/artist/rudrajit-samanta-software/id284945677?uo=4\",
+      \"artworkUrl60\":\"http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png\",
       \n\"screenshotUrls\":[\"http://a2.mzstatic.com/us/r1000/075/Purple/6e/5d/55/mzl.dutqznbu.png\",
       \"http://a5.mzstatic.com/us/r1000/085/Purple/7c/a0/8a/mzl.msgqswno.png\", \"http://a1.mzstatic.com/us/r1000/071/Purple/8a/79/fc/mzl.bduofqau.png\",
       \"http://a5.mzstatic.com/us/r1000/118/Purple/14/1f/b8/mzl.wytvyxea.png\", \"http://a5.mzstatic.com/us/r1000/090/Purple/69/a5/cb/mzl.ckdvlgka.png\"],
-      \"ipadScreenshotUrls\":[], \"artworkUrl60\":\"http://a5.mzstatic.com/us/r1000/105/Purple/89/10/55/mzi.rszguyzr.png\",
-      \"artworkUrl512\":\"http://a1.mzstatic.com/us/r1000/110/Purple/0f/a5/61/mzl.erxeldoy.tiff\",
-      \"artistViewUrl\":\"http://itunes.apple.com/us/artist/rudrajit-samanta-software/id284945677?uo=4\",
+      \"ipadScreenshotUrls\":[], \"artworkUrl512\":\"http://a1.mzstatic.com/us/r1000/110/Purple/0f/a5/61/mzl.erxeldoy.tiff\",
       \"artistId\":284945677, \"artistName\":\"Rudrajit Samanta Software\", \"price\":0.00,
       \"version\":\"2.3\", \n\"description\":\"iWant is essentially the combination
       of 3 location based apps : Restaurant reviews (Yelp, UrbanSpoon), Movie showtimes
@@ -70,10 +70,10 @@
       \"trackId\":284945674, \"trackName\":\"iWant\", \"primaryGenreName\":\"Navigation\",
       \"primaryGenreId\":6010, \"releaseNotes\":\"- Fixed issue where you could not
       update the location\\n- Fix for movie times\\n- Fix for bad settings causing
-      it to crash on launch\", \"wrapperType\":\"software\", \"trackCensoredName\":\"iWant\",
-      \"languageCodesISO2A\":[\"EN\"], \"fileSizeBytes\":\"4623460\", \"sellerUrl\":\"http://hotnewspots.com/iWant\",
-      \"contentAdvisoryRating\":\"4+\", \"averageUserRatingForCurrentVersion\":3.5,
-      \"userRatingCountForCurrentVersion\":14, \"artworkUrl100\":\"http://a1.mzstatic.com/us/r1000/110/Purple/0f/a5/61/mzl.erxeldoy.tiff\",
-      \"trackViewUrl\":\"http://itunes.apple.com/us/app/iwant/id284945674?mt=8&uo=4\",
+      it to crash on launch\", \"wrapperType\":\"software\", \"contentAdvisoryRating\":\"4+\",
+      \"artworkUrl100\":\"http://a1.mzstatic.com/us/r1000/110/Purple/0f/a5/61/mzl.erxeldoy.tiff\",
+      \"trackCensoredName\":\"iWant\", \"languageCodesISO2A\":[\"EN\"], \"fileSizeBytes\":\"4623460\",
+      \"sellerUrl\":\"http://hotnewspots.com/iWant\", \"averageUserRatingForCurrentVersion\":3.5,
+      \"userRatingCountForCurrentVersion\":14, \"trackViewUrl\":\"http://itunes.apple.com/us/app/iwant/id284945674?mt=8&uo=4\",
       \"trackContentRating\":\"4+\", \"averageUserRating\":2.5, \"userRatingCount\":19187}]\n}\n\n\n"
     http_version: '1.1'
