@@ -1,4 +1,4 @@
-== Exercise
+== About
 
 This exercise is a sample application that implements JSON remote calls to iTunes store. It is built on Twitter Bootstrap and supports mobile platforms.
 
