@@ -1,5 +1,5 @@
 class Product
-  attr_accessor :track_id, :track_name, :artwork_url_60
+  attr_accessor :track_id, :track_name, :artwork_url_60, :description
   
   def initialize(attrs=nil)
     super()
@@ -7,6 +7,7 @@ class Product
       @track_id       = attrs[:track_id]
       @track_name     = attrs[:track_name]
       @artwork_url_60 = attrs[:artwork_url_60]
+      @description    = attrs[:description]
     end
   end
   
@@ -14,7 +15,8 @@ class Product
     { 
       track_id: @track_id,
       track_name: @track_name,
-      artwork_url_60: @artwork_url_60
+      artwork_url_60: @artwork_url_60,
+      description: @description
     }
   end
 
@@ -33,7 +35,8 @@ class Product
         self.new(
           track_id:       attrs['trackId'],
           track_name:     attrs['trackName'],
-          artwork_url_60: attrs['artworkUrl60']
+          artwork_url_60: attrs['artworkUrl60'],
+          description:    attrs['description']
         )
       end
     else

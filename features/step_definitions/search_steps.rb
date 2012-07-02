@@ -12,13 +12,13 @@ When /^user submitted an app name "(.*?)" for search$/ do |arg1|
 end
 
 Then /^he can see the result that contains the app name "(.*?)"$/ do |arg1|
-  within("div#product_details") do
+  within("div.product-header") do
     page.should have_content(arg1)
   end
 end
 
 Then /^contains the app icon "(.*?)"$/ do |arg1|
-  within("div#product_details") do
+  within("div.product-header") do
 #    page.should have_content(arg1)
     page.should have_css("img", :src => arg1)
   end
@@ -26,7 +26,7 @@ end
 
 Then /^it should not contain other apps except of "(.*?)"$/ do |arg1|
   @app_tags.each do |tag|
-    within("div#product_details") do
+    within("div.product-header") do
       page.should have_no_content(tag['Track Name']) unless tag['Track Name'] == arg1
     end
   end

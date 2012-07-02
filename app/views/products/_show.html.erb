@@ -6,21 +6,7 @@
   </div>
   
   <h3>Description</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Cras non lacus nisi. Suspendisse nec eros ac lectus ultricies
-    feugiat nec id lacus. Nunc ultricies diam ac sem feugiat porta.
-    Ut lorem sapien, feugiat dapibus fringilla sed, egestas quis
-    ligula. Nulla vestibulum est nec nunc pretium at dictum sapien
-    pharetra. Integer ut posuere lacus. Morbi est justo, ornare
-    posuere consectetur sed, mollis ut justo. Sed et imperdiet lectus.
-    Fusce ut magna ligula, at venenatis nibh. Nunc quis mi lacus.
-    Vivamus dapibus massa id orci mollis ullamcorper.
-    Duis placerat interdum mauris, at volutpat lacus tincidunt ut.
-    Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Curabitur bibendum orci
-    ac nisl viverra condimentum. 
-  </p>
+  <p><%=raw sanitize(simple_format(@product.description), :tags => %w(br p) ) %></p>
   
   <h3>Screenshots</h3>
 </div>
