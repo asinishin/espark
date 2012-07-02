@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
 */
+
+div.product-header {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+div.product-header img, h2 {
+  float:left;
+}
+
+div.product-header h2 {
+  margin: 10px 0 0 20px;
+}

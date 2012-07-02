@@ -12,8 +12,6 @@
   <label>Search app</label>
     <%= f.text_field :options %>
   <% end %>
-  <div class='span8'>
-    <%= render :partial => "show" unless @product.nil? %>
-  </div>
+  <%= render :partial => "show" unless @product.nil? %>
 </div>
 
