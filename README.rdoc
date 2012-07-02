@@ -2,6 +2,8 @@
 
 This exercise is a sample application that implements JSON remote calls to iTunes store
 
+Demo is available here: http://espark.herokuapp.com
+
 == Getting started
 
 The application does not use DB, so you should run only:
@@ -24,4 +26,5 @@ Run:
 
 Then in the browser:
 
-http://localhost/products
+http://localhost:3000/
+
