@@ -5,13 +5,13 @@ class ProductsController < ApplicationController
   end
   
   def lookup
-    @product = StoreApi.lookup_by_id(params[:lookup][:options])
+    @product = StoreApi.lookup_by_name(params[:lookup][:options])
     render 'index'    
   end
   
   def list
-    sample = params[:q]
-    render :json => StoreApi.search_tags_by_example(sample).map { |tag| { name: tag.name, id: tag.tag_id } }    
+    sample = params[:term]
+    render :json => StoreApi.search_tags_by_example(sample).map { |tag| tag.name }    
   end
 
 end

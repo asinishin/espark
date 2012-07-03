@@ -6,9 +6,7 @@ class Tag < ActiveRecord::Base
   before_create :normalize
 
   def self.search_by_example(name_example)
-    rs = where("name ilike '#{name_example}%'").order('name').first(8)
-    p rs
-    rs
+    where("name ilike '#{name_example}%'").order('name').first(8)
   end
 
   # TODO: Later it might be needed

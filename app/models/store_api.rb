@@ -7,7 +7,12 @@ class StoreApi
     json = Net::HTTP.get(uri)
     Product.build_from_json(json).first
   end
-  
+
+  def self.lookup_by_name(app_name)
+    tag = Tag.find_by_name(app_name)
+    lookup_by_id(tag.tag_id) unless tag.nil?
+  end
+
   def self.search_tags_by_example(name_example, asynchr_cache_mode=true)
     if name_example.nil? || name_example.empty?
       []

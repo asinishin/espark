@@ -11,7 +11,7 @@
       message: OK
     headers:
       x-apple-timing-app:
-      - 12 ms
+      - 8 ms
       x-apple-orig-url-path:
       - /lookup?id=456191378
       x-apple-translated-wo-url:
@@ -23,13 +23,13 @@
       content-type:
       - text/javascript; charset=utf-8
       x-apple-application-instance:
-      - '1023019'
+      - '1006016'
       x-webobjects-loadaverage:
       - '0'
       cache-control:
-      - no-transform, max-age=54
+      - no-transform, max-age=56
       date:
-      - Mon, 02 Jul 2012 12:16:09 GMT
+      - Tue, 03 Jul 2012 12:56:32 GMT
       content-length:
       - '3295'
       connection:
@@ -70,7 +70,7 @@
       & speed\\n✓ Bug fixes\", \"wrapperType\":\"software\", \"trackCensoredName\":\"forkly\",
       \"languageCodesISO2A\":[\"EN\"], \"fileSizeBytes\":\"7805587\", \"sellerUrl\":\"http://forkly.com\",
       \"contentAdvisoryRating\":\"12+\", \"averageUserRatingForCurrentVersion\":4.5,
-      \"userRatingCountForCurrentVersion\":30, \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/109/Purple/v4/61/dc/30/61dc3023-e98d-b5f0-45d0-f0460a87b09c/mzl.jlajoxxx.png\",
+      \"userRatingCountForCurrentVersion\":33, \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/109/Purple/v4/61/dc/30/61dc3023-e98d-b5f0-45d0-f0460a87b09c/mzl.jlajoxxx.png\",
       \"trackViewUrl\":\"http://itunes.apple.com/us/app/forkly/id456191378?mt=8&uo=4\",
-      \"trackContentRating\":\"12+\", \"averageUserRating\":4.5, \"userRatingCount\":289}]\n}\n\n\n"
+      \"trackContentRating\":\"12+\", \"averageUserRating\":4.5, \"userRatingCount\":292}]\n}\n\n\n"
     http_version: '1.1'

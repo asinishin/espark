@@ -1,0 +1,79 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?id=313008539
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-timing-app:
+      - 11 ms
+      x-apple-orig-url-path:
+      - /lookup?id=313008539
+      x-apple-translated-wo-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?id=313008539
+      x-apple-application-site:
+      - ST11
+      x-apple-max-age:
+      - '3600'
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '2035005'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=59
+      date:
+      - Tue, 03 Jul 2012 13:13:39 GMT
+      content-length:
+      - '3408'
+      connection:
+      - keep-alive
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"kind\":\"software\",
+      \"features\":[], \"supportedDevices\":[\"all\"], \"isGameCenterEnabled\":false,
+      \"artistViewUrl\":\"http://itunes.apple.com/us/artist/rudrajit-samanta-software/id284945677?uo=4\",
+      \"artworkUrl60\":\"http://a4.mzstatic.com/us/r1000/112/Purple/45/16/dd/mzi.hcvjpgwc.png\",
+      \n\"screenshotUrls\":[\"http://a1.mzstatic.com/us/r1000/069/Purple/a6/b0/e2/mzl.rlavlimt.tiff\",
+      \"http://a3.mzstatic.com/us/r1000/112/Purple/f8/62/1b/mzl.ildfpgdu.jpg\", \"http://a5.mzstatic.com/us/r1000/103/Purple/ad/0c/90/mzl.yiouiviz.jpg\",
+      \"http://a2.mzstatic.com/us/r1000/105/Purple/f6/2c/98/mzl.fazzaksl.jpg\", \"http://a2.mzstatic.com/us/r1000/120/Purple/34/68/98/mzl.xgnvulmr.jpg\"],
+      \"ipadScreenshotUrls\":[], \"artworkUrl512\":\"http://a1.mzstatic.com/us/r1000/094/Purple/aa/f3/f8/mzl.hesqihbm.tiff\",
+      \"artistId\":284945677, \"artistName\":\"Rudrajit Samanta Software\", \"price\":0.99,
+      \"version\":\"2.3\", \n\"description\":\"iWant is essentially the combination
+      of 3 location based apps : Restaurant reviews (Yelp, UrbanSpoon), Movie showtimes
+      (Flixter, Fandango) and Yellow Pages (Yellow Pages, AroundMe).  Why use iWant
+      Pro instead of these separate ones ? \\n\\n\\u2022 iWant Pro is faster, simpler
+      and presents all this varied information in a clean and unified view.  It will
+      help you reduce clutter on your home screen as it combines the functionality
+      of several other apps.\\n\\n\\u2022 Unlike typical Yellow Pages apps like AroundMe,
+      iWant Pro gives you restaurant reviews (instead of just a list of names) and
+      movie times (rather than just a list of theaters near you) so that you can make
+      an informed decision.\\n\\n\\u2022 iWant Pro has 3 pages of category icons,
+      giving you one-tap access to over 30 categories.  Also, you can filter restaurants
+      and nightlife with another two taps -- no typing required.\\n\\n\\u2022 iWant
+      Pro can also show you nearby landmarks from Wikipedia (try the 'W' icon on the
+      second page) so that you can use iWant Pro like a virtual tour guide in a new
+      city.\\n\\n\\u2022 Use the settings icon (bottom left) to narrow or expand the
+      search radius.  Use the map icon (bottom right) to see your results plotted
+      on an interactive map.\\n\\nAs seen in : The Wall St. Journal (Walt Mossberg
+      and Katherine Boehret), The NYTimes (Michelle Higgins) and WIRED magazine (Mathew
+      Honan).\\n\\nPlease watch the instructional videos @ http://vimeo.com/iwant\\n\\nIf
+      you'd like to try before you buy, you can download iWant for free (it's ad supported).\",
+      \"genreIds\":[\"6010\", \"6003\"], \"releaseDate\":\"2009-05-21T02:04:12Z\",
+      \"sellerName\":\"Rudrajit Samanta\", \"currency\":\"USD\", \"genres\":[\"Navigation\",
+      \"Travel\"], \"bundleId\":\"com.rudro.iwantpro\", \"trackId\":313008539, \"trackName\":\"iWant
+      Pro\", \"primaryGenreName\":\"Navigation\", \"primaryGenreId\":6010, \"releaseNotes\":\"-
+      Fixed issue where you could not update the location\\n- Fix for movie times\\n-
+      Fix for bad settings causing it to crash on launch\", \"wrapperType\":\"software\",
+      \"trackCensoredName\":\"iWant Pro\", \"trackViewUrl\":\"http://itunes.apple.com/us/app/iwant-pro/id313008539?mt=8&uo=4\",
+      \"contentAdvisoryRating\":\"4+\", \"artworkUrl100\":\"http://a1.mzstatic.com/us/r1000/094/Purple/aa/f3/f8/mzl.hesqihbm.tiff\",
+      \"languageCodesISO2A\":[\"EN\"], \"fileSizeBytes\":\"4624768\", \"sellerUrl\":\"http://hotnewspots.com/iWant\",
+      \"averageUserRatingForCurrentVersion\":1.0, \"userRatingCountForCurrentVersion\":1,
+      \"trackContentRating\":\"4+\", \"averageUserRating\":3.0, \"userRatingCount\":283}]\n}\n\n\n"
+    http_version: '1.1'

@@ -10,7 +10,7 @@
 <div class='row'>
   <%= form_for(:lookup, :url => lookup_products_path, :html => {:id => "search_form", :class =>"well span3"}) do |f| %>
   <label>Search app</label>
-    <%= f.text_field :options %>
+    <%= f.text_field :options, data: {autocomplete_source: list_products_path} %>
   <% end %>
   <%= render :partial => "show" unless @product.nil? %>
 </div>

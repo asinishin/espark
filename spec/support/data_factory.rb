@@ -6,7 +6,7 @@ module DataFactory
       fake_products.map { |p| p.attributes }
     end
 
-    let(:characters_entered) { 'yel'}
+    let(:characters_entered) {'yel'}
     
     let(:favorite_product) { Product.new(product_samples.last) }
   end

@@ -4,19 +4,12 @@ $(document).ready(function(){
 
 Search = {
   init: function() {
-    $("#lookup_options").tokenInput("/products/list.json", {
-      crossDomain: false,
-      theme: "facebook",
-      minChars: 1,
-      tokenLimit: 1,
-      searchDelay: 200,
-      onAdd: function (item) {
+		$("#lookup_options").autocomplete({
+			source: $('#lookup_options').data('autocomplete-source'),
+      select: function(event, ui) {
+        $(this).val(ui.item.value);
         $("#search_form").submit();
-      },
-      preventDuplicates: true,
-      hintText: "Enter name",
-      noResultsText: "Not found!",
-      searchingText: "Searching..."
+      }
     });
   }
 }

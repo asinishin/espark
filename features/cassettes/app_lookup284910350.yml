@@ -11,25 +11,25 @@
       message: OK
     headers:
       x-apple-timing-app:
-      - 11 ms
+      - 19 ms
       x-apple-orig-url-path:
       - /lookup?id=284910350
       x-apple-translated-wo-url:
       - /WebObjects/MZStoreServices.woa/ws/wsLookup?id=284910350
       x-apple-application-site:
-      - ST11
+      - NWK
       x-apple-max-age:
       - '3600'
       content-type:
       - text/javascript; charset=utf-8
       x-apple-application-instance:
-      - '2039012'
+      - '3014008'
       x-webobjects-loadaverage:
       - '0'
       cache-control:
-      - no-transform, max-age=53
+      - no-transform, max-age=60
       date:
-      - Mon, 02 Jul 2012 12:15:47 GMT
+      - Tue, 03 Jul 2012 13:20:57 GMT
       content-length:
       - '4102'
       connection:
@@ -72,11 +72,11 @@
       reviews, and more through the new About Me section on iPad!\\n☆ View your past
       check-ins laid out on top of a map of your area - only on iPad! \\n☆ Photos
       are now present alongside search results across both apps!\\n☆ Introducing support
-      for our newest country: Amercia\", \"wrapperType\":\"software\", \"trackCensoredName\":\"Yelp\",
-      \"trackViewUrl\":\"http://itunes.apple.com/us/app/yelp/id284910350?mt=8&uo=4\",
-      \"contentAdvisoryRating\":\"12+\", \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/078/Purple/v4/17/cc/2b/17cc2b39-3701-c558-bb76-d1c992c7ddd2/mza_1479090093002497171.png\",
+      for our newest country: Amercia\", \"wrapperType\":\"software\", \"contentAdvisoryRating\":\"12+\",
+      \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/078/Purple/v4/17/cc/2b/17cc2b39-3701-c558-bb76-d1c992c7ddd2/mza_1479090093002497171.png\",
+      \"trackCensoredName\":\"Yelp\", \"trackViewUrl\":\"http://itunes.apple.com/us/app/yelp/id284910350?mt=8&uo=4\",
       \"languageCodesISO2A\":[\"DA\", \"DE\", \"EN\", \"ES\", \"FI\", \"FR\", \"IT\",
       \"NL\", \"SV\", \"NB\"], \"fileSizeBytes\":\"20965916\", \"averageUserRatingForCurrentVersion\":4.5,
-      \"userRatingCountForCurrentVersion\":3945, \"trackContentRating\":\"12+\", \"averageUserRating\":3.5,
-      \"userRatingCount\":144466}]\n}\n\n\n"
+      \"userRatingCountForCurrentVersion\":4134, \"trackContentRating\":\"12+\", \"averageUserRating\":3.5,
+      \"userRatingCount\":144628}]\n}\n\n\n"
     http_version: '1.1'

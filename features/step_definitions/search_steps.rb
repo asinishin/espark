@@ -11,10 +11,11 @@ end
 
 When /^user submitted an app name "(.*?)" for search$/ do |arg1|
   visit '/products'
-  fill_in 'token-input-lookup_options', :with => arg1.first(3).downcase
-  sleep 1
+  fill_in 'lookup_options', :with => arg1.first(3).downcase
   VCR.use_cassette("app_lookup" + tag_id_by_name(@app_tags, arg1)) do
-    find("li:contains('#{arg1.downcase}')").click
+    sleep 1
+    page.execute_script("$(\"a.ui-corner-all:contains('#{arg1.downcase}')\").mouseover().click();")
+    sleep 3
   end
 end
 
