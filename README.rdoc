@@ -6,9 +6,15 @@ Demo is available here: http://espark.herokuapp.com
 
 == Getting started
 
-The application does not use DB, so you should run only:
+The application requires DB (I used Postgres but it can be any SQL database) and background worker for Delayed Jobs.
+
+Installation:
 
 #bundle
+
+#rake db:create
+
+#rake db:migrate
 
 == Tests
 
@@ -20,11 +26,20 @@ Run:
 
 == Launch
 
-Run:
+Run web server:
 
 #rails s
+
+And DJ worker as another process:
+
+#rake jobs:work
 
 Then in the browser:
 
 http://localhost:3000/
+
+== Simple version without DB
+
+There is an older version that does not require DB and worker
+in the branch: /simple_without_db
 
