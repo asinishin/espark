@@ -12,8 +12,7 @@ Search = {
       searchDelay: 200,
       onAdd: function (item) {
         $("#search_form").submit();
-      }, 
-      prePopulate: $("#lookup_options").data("pre"),
+      },
       preventDuplicates: true,
       hintText: "Enter name",
       noResultsText: "Not found!",

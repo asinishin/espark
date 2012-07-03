@@ -7,9 +7,12 @@ describe ProductsController do
     prepare_product_samples
 
     before(:each) do
+      Product.fill_tag_cache(FakeProduct.dummy_search_by_name_example(characters_entered))
+      expected_list = Tag.all
+      StoreApi.should_receive(:search_tags_by_example).with(characters_entered).and_return(expected_list)
+
       visit('/products')
       fill_in 'token-input-lookup_options', :with => characters_entered
-      StoreApi.should_receive(:search_tags_by_example).with(characters_entered).and_return(expected_list)
     end      
 
     context "with characters 'yel' entered in the seach field" do      

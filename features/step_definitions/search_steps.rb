@@ -1,5 +1,12 @@
 Given /^the following app tags:$/ do |table|
   @app_tags = table.hashes
+
+  #Full fill the tag cache with given samples
+  @app_tags.each do |tag|
+    VCR.use_cassette("app_search" + tag['Track ID']) do    
+      StoreApi.search_tags_by_example(tag['Track Name'], false)
+    end
+  end
 end
 
 When /^user submitted an app name "(.*?)" for search$/ do |arg1|

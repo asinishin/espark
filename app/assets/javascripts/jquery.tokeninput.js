@@ -834,7 +834,7 @@ $.TokenList = function (input, url_or_data, settings) {
 // Really basic cache for the results
 $.TokenList.Cache = function (options) {
     var settings = $.extend({
-        max_size: 500
+        max_size: 5
     }, options);
 
     var data = {};

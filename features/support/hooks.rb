@@ -1,9 +1,9 @@
 Before do
-  #FakeWeb.clean_registry
 
-#  DatabaseCleaner.start
+  DatabaseCleaner.start
+  Tag.clear_cache
 end
 
 After do |scenario|
-#  DatabaseCleaner.clean
+  DatabaseCleaner.clean
 end

@@ -23,12 +23,12 @@ class Product
   end
 
   def self.fill_tag_cache(products)
-    Tag.cache_tags(products) do |product|
-      { tag_id: product.track_id, name: product.track_name }
+    products.each do |product|
+      tg = Tag.where("tag_id = '#{product.track_id}'").first
+      Tag.create({ tag_id: product.track_id, name: product.track_name }) if tg.nil?
     end
-    Tag.all
   end
-
+  
   def self.build_from_json(json)
     apps_data = JSON.parse(json)
     unless apps_data['resultCount'].nil?

@@ -22,6 +22,8 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'database_cleaner',   '~> 0.7.2'
+#  gem 'factory_girl_rails', '~> 3.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
@@ -31,6 +33,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pg'
+gem 'delayed_job_active_record'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
