@@ -15,8 +15,16 @@ class Tag < ActiveRecord::Base
   # TODO: Later it might be needed
   def self.clear_cache
   end
+  
+  def self.normalize_name(name)
+    name.first(Globals::TAG_NAME_LENGTH).downcase
+  end
+  
+  def self.find_the_tag(tag_id, name)
+    where("tag_id = '#{tag_id}' OR name = '#{normalize_name(name)}'").first
+  end
 
   def normalize
-    self.name = self.name.first(Globals::TAG_NAME_LENGTH).downcase
+    self.name = Tag::normalize_name(name)
   end
 end

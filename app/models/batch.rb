@@ -16,6 +16,6 @@ class Batch < ActiveRecord::Base
   end
 
   def normalize
-    self.example = self.example.first(Globals::TAG_NAME_LENGTH).downcase
+    self.example = Tag.normalize_name(self.example)
   end
 end

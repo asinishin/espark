@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120703151800) do
+ActiveRecord::Schema.define(:version => 20120704005511) do
 
   create_table "batches", :force => true do |t|
     t.string   "example",    :limit => 30
@@ -43,5 +43,6 @@ ActiveRecord::Schema.define(:version => 20120703151800) do
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
+  add_index "tags", ["tag_id"], :name => "index_tags_on_tag_id", :unique => true
 
 end
