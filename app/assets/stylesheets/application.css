@@ -12,6 +12,14 @@
  *= require_tree .
 */
 
+#search_form .controls {
+  padding-right: 10px;
+}
+
+#search_form #lookup_options {
+  width: 100%;
+}
+
 div.product-header {
   height: 80px;
   margin-bottom: 20px;

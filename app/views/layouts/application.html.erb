@@ -9,7 +9,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;'>
 </head>
 <body>
 <div class='navbar navbar-fixed-top'>
@@ -32,17 +32,26 @@
     </div>
   </div>
 </div>
-<div id='main' class='container box-shadow'>
-  <%= yield :red_line %>
-  <% flash.each do |name, msg| %>
-    <div class='alert alert-<%= name == :notice ? "success" : "error" %>'>
-      <a class='close' data-dismiss='alert'>x</a>
-      <%= msg %>
+<div class='container'>
+  <header class="jumbotron subhead" id="overview">
+    <%= yield :red_line %>
+    <% flash.each do |name, msg| %>
+      <div class='alert alert-<%= name == :notice ? "success" : "error" %>'>
+        <a class='close' data-dismiss='alert'>x</a>
+        <%= msg %>
+      </div>
+    <% end %>
+  </header>
+  <sedction id='content'>
+    <div class="row">
+      <div class="span4">
+        <%= yield :side_bar %>
+      </div>
+      <div class="span8">
+        <%= yield %>
+      </div>
     </div>
-  <% end %>
-  <div class='content'>
-    <%= yield %>
-  </div>
+  </section>
 	<div class="clearfix"> </div>
 	<hr>
 	<footer>

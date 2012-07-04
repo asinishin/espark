@@ -1,17 +1,19 @@
 <% title = "Apple Store" %>
 <% content_for :title do title end %>
+
 <% content_for :red_line do %>
-	<div class="row">
-    <h1 class="span4 pull-left"><%= title %></h1>
-  </div>
+  <h1><%= title %></h1>
   <legend>Small Vendor Affiliate</legend>
 <% end %>
 
-<div class='row'>
-  <%= form_for(:lookup, url: lookup_products_path, html: {id: "search_form", class: "well span3"}) do |f| %>
-  <label>Search app</label>
-    <%= f.text_field :options, data: {autocomplete_source: list_products_path}, class: "input-large" %>
+<% content_for :side_bar do %>
+  <%= form_for(:lookup, url: lookup_products_path, html: {id: "search_form", class: "well"}) do |f| %>
+    <label>Search app</label>
+    <div class="controls">
+      <%= f.text_field :options, data: {autocomplete_source: list_products_path} %>
+    </div>
   <% end %>
-  <%= render partial: "show" unless @product.nil? %>
-</div>
+<% end %>
+
+<%= render partial: "show" unless @product.nil? %>
 
