@@ -17,11 +17,11 @@ class Tag < ActiveRecord::Base
   end
   
   def self.normalize_name(name)
-    name.first(Globals::TAG_NAME_LENGTH).downcase
+    name.first(Globals::TAG_NAME_LENGTH).downcase.chomp('"')
   end
   
   def self.find_the_tag(tag_id, name)
-    where("tag_id = '#{tag_id}' OR name = '#{normalize_name(name)}'").first
+    where("tag_id = '#{tag_id}' OR name = \"#{normalize_name(name)}\"").first
   end
 
   def normalize
