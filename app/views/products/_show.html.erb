@@ -1,6 +1,10 @@
 <div id="product_details" class='span8 well'>
   <div class="product-header">
-    <%= image_tag(@product.artwork_url_60) %>
+  <% if test? %>
+    <%= image_tag('dummy57_57.gif', {alt: "#{@product.artwork_url_60}"}) %>
+  <% else %>
+    <%= image_tag(@product.artwork_url_60, {alt: ''}) %>
+  <% end %>
     <h2><%= @product.track_name %></h2>
     <div style='clear:both'></div>
   </div>

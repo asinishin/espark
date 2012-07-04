@@ -15,7 +15,9 @@ When /^user submitted an app name "(.*?)" for search$/ do |arg1|
   VCR.use_cassette("app_lookup" + tag_id_by_name(@app_tags, arg1)) do
     sleep 1
     page.execute_script("$(\"a.ui-corner-all:contains('#{arg1.downcase}')\").mouseover().click();")
-    sleep 3
+
+    # When your cassets are empty you should increase the wait time
+    sleep 2
   end
 end
 
