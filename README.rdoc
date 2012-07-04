@@ -20,6 +20,8 @@ Installation:
 
 Run:
 
+#rake db:test:prepare
+
 #cucumber
 
 #rspec
