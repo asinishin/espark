@@ -8,10 +8,10 @@
 <% end %>
 
 <div class='row'>
-  <%= form_for(:lookup, :url => lookup_products_path, :html => {:id => "search_form", :class =>"well span3"}) do |f| %>
+  <%= form_for(:lookup, url: lookup_products_path, html: {id: "search_form", class: "well span3"}) do |f| %>
   <label>Search app</label>
-    <%= f.text_field :options, data: {autocomplete_source: list_products_path} %>
+    <%= f.text_field :options, data: {autocomplete_source: list_products_path}, class: "input-large" %>
   <% end %>
-  <%= render :partial => "show" unless @product.nil? %>
+  <%= render partial: "show" unless @product.nil? %>
 </div>
 
