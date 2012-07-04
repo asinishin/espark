@@ -17,7 +17,7 @@ class Tag < ActiveRecord::Base
   end
   
   def self.normalize_name(name)
-    name.first(Globals::TAG_NAME_LENGTH).downcase.chomp("'")
+    name.first(Globals::TAG_NAME_LENGTH).downcase.gsub(/'/, '`')
   end
   
   def self.find_the_tag(tag_id, name)
