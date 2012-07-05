@@ -1,3 +1,5 @@
+require 'fake_product'
+
 module DataFactory
   
   def prepare_product_samples

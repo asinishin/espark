@@ -1,5 +1,4 @@
 require 'net/http'
-require 'fake_product'
 
 class StoreApi
   def self.api_request(uri)
