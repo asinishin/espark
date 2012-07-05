@@ -3,7 +3,7 @@ module DataFactory
   def prepare_product_samples
     let(:product_samples) do
       fake_products = Product.build_from_json(FakeProduct.build_dummies)
-      fake_products.map { |p| p.attributes }
+      fake_products.map(&:attributes)
     end
 
     let(:characters_entered) {'yel'}

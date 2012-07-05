@@ -8,10 +8,7 @@ class Batch < ActiveRecord::Base
 
   def load
     unless self.example.nil?
-      term = URI.escape(self.example)
-      uri = URI.parse("http://itunes.apple.com/search?term=#{term}&country=us&entity=software")
-      json = Net::HTTP.get(uri)
-      Product.fill_tag_cache(Product.build_from_json(json))
+      Product.fill_tag_cache(StoreApi.search_by_example(self.example))
     end
   end
 

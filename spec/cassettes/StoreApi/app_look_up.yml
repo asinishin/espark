@@ -11,7 +11,7 @@
       message: OK
     headers:
       x-apple-timing-app:
-      - 19 ms
+      - 18 ms
       x-apple-orig-url-path:
       - /lookup?id=284910350
       x-apple-translated-wo-url:
@@ -23,13 +23,13 @@
       content-type:
       - text/javascript; charset=utf-8
       x-apple-application-instance:
-      - '2071008'
+      - '2016010'
       x-webobjects-loadaverage:
       - '0'
       cache-control:
-      - no-transform, max-age=60
+      - no-transform, max-age=54
       date:
-      - Sat, 30 Jun 2012 18:17:36 GMT
+      - Thu, 05 Jul 2012 04:07:52 GMT
       content-length:
       - '4102'
       connection:
@@ -77,6 +77,6 @@
       \"contentAdvisoryRating\":\"12+\", \"artworkUrl100\":\"http://a3.mzstatic.com/us/r1000/078/Purple/v4/17/cc/2b/17cc2b39-3701-c558-bb76-d1c992c7ddd2/mza_1479090093002497171.png\",
       \"languageCodesISO2A\":[\"DA\", \"DE\", \"EN\", \"ES\", \"FI\", \"FR\", \"IT\",
       \"NL\", \"SV\", \"NB\"], \"fileSizeBytes\":\"20965916\", \"averageUserRatingForCurrentVersion\":4.5,
-      \"userRatingCountForCurrentVersion\":3552, \"trackContentRating\":\"12+\", \"averageUserRating\":3.5,
-      \"userRatingCount\":144123}]\n}\n\n\n"
+      \"userRatingCountForCurrentVersion\":4429, \"trackContentRating\":\"12+\", \"averageUserRating\":3.5,
+      \"userRatingCount\":144894}]\n}\n\n\n"
     http_version: '1.1'

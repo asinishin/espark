@@ -11,7 +11,7 @@ end
 
 When /^user submitted an app name "(.*?)" for search$/ do |arg1|
   visit '/products'
-  fill_in 'lookup_options', :with => arg1.first(3).downcase
+  fill_in 'lookup_options', with: arg1.first(3).downcase
   VCR.use_cassette("app_lookup" + tag_id_by_name(@app_tags, arg1)) do
     sleep 1
     page.execute_script("$(\"a.ui-corner-all:contains('#{arg1.downcase}')\").mouseover().click();")
@@ -30,7 +30,7 @@ end
 Then /^contains the app icon "(.*?)"$/ do |arg1|
   within("div.product-header") do
 #    page.should have_content(arg1)
-    page.should have_css("img", :src => arg1)
+    page.should have_css("img", src: arg1)
   end
 end
 

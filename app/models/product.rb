@@ -25,7 +25,7 @@ class Product
   def self.fill_tag_cache(products)
     products.each do |product|
       tg = Tag.find_the_tag(product.track_id, product.track_name)
-      Tag.create({ tag_id: product.track_id, name: product.track_name }) if tg.nil?
+      Tag.create(tag_id: product.track_id, name: product.track_name) if tg.nil?
     end
   end
   

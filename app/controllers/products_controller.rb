@@ -5,13 +5,18 @@ class ProductsController < ApplicationController
   end
   
   def lookup
-    @product = StoreApi.lookup_by_name(params[:lookup][:options])
+    begin
+      @product = StoreApi.lookup_by_name(params[:lookup][:options])
+    rescue => e
+      flash.now[:alert] = e.message
+      @product = nil
+    end
     render 'index'    
   end
   
   def list
     sample = params[:term]
-    render :json => StoreApi.search_tags_by_example(sample).map { |tag| tag.name }    
+    render :json => StoreApi.search_tags_by_example(sample).map(&:name)
   end
 
 end

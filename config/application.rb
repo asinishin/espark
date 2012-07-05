@@ -59,5 +59,9 @@ module Espark
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Apple store URLs
+    config.api_search_url = "http://itunes.apple.com/search"
+    config.api_lookup_url = "http://itunes.apple.com/lookup"
   end
 end

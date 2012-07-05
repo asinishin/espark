@@ -13,7 +13,7 @@ describe StoreApi do
     it "should find several app tags by name example" do
       @tags.size.should_not == 0
       @tags.each do |tag|
-        tag.name.include?(characters_entered).should be_true
+        tag.name.index(characters_entered).should == 0
       end
     end
 
@@ -21,7 +21,9 @@ describe StoreApi do
       @tags.size.should_not == 0
       @tags.each do |tag|
         product_samples.each do |sample|
-          sample[:track_name].should_not == tag.name unless sample[:track_name].include?(characters_entered)
+          unless sample[:track_name].index(characters_entered) == 0
+            sample[:track_name].should_not == tag.name
+          end
         end
       end
     end

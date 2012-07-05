@@ -1,16 +1,16 @@
 <div id="product_details" class='well'>
   <div class="product-header">
   <% if test? %>
-    <%= image_tag('dummy57_57.gif', {alt: "#{@product.artwork_url_60}"}) %>
+    <%= image_tag('dummy57_57.gif', { alt: "#{@product.artwork_url_60}" }) %>
   <% else %>
-    <%= image_tag(@product.artwork_url_60, {alt: ''}) %>
+    <%= image_tag(@product.artwork_url_60, { alt: '' }) %>
   <% end %>
     <h2><%= @product.track_name %></h2>
     <div class='clearfix'></div>
   </div>
   
   <h3>Description</h3>
-  <p><%=raw sanitize(simple_format(@product.description), :tags => %w(br p) ) %></p>
+  <p><%=raw sanitize(simple_format(@product.description), tags: %w(br p) ) %></p>
   
   <% unless no_pics? %>
     <h3>Screenshots</h3>
