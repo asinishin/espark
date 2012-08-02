@@ -57,3 +57,10 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+# set javascript driver for capybara
+Capybara.register_driver :iphone do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :iphone)
+end
+
+Capybara.javascript_driver = :iphone

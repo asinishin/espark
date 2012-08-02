@@ -12,8 +12,12 @@ require 'cucumber/rails'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
+Capybara.register_driver :iphone do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :iphone)
+end
+
 # set javascript driver for capybara
-Capybara.javascript_driver = :selenium
+Capybara.javascript_driver = :iphone
 #Capybara.javascript_driver = :webkit
 
 # By default, any exception happening in your Rails application will bubble up
