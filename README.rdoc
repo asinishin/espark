@@ -2,8 +2,6 @@
 
 This exercise is a sample application that implements JSON remote calls to iTunes store. It is built on Twitter Bootstrap and supports mobile platforms.
 
-Demo is available here: http://espark.herokuapp.com
-
 == Getting started
 
 The application requires DB (I used Postgres but it can be any SQL database) and background worker for Delayed Jobs.
