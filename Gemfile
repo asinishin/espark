@@ -17,8 +17,6 @@ end
 group :assets do
   gem 'sass-rails',         '~> 3.2.3'
   gem 'coffee-rails',       '~> 3.2.1'
-  gem 'database_cleaner',   '~> 0.7.2'
-#  gem 'factory_girl_rails', '~> 3.0.0'
   gem 'uglifier', '>= 1.0.3'
   gem 'twitter-bootstrap-rails'
 end
