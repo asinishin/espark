@@ -9,8 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
+
+@import "bootstrap";
+
+body { 
+  padding-top: 60px;
+  padding-left: 20px;
+}
 
 #search_form .controls {
   padding-right: 10px;
