@@ -26,3 +26,4 @@ end
 gem 'jquery-rails'
 gem 'pg'
 gem 'delayed_job_active_record'
+gem 'daemons'
