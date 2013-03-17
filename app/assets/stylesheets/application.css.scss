@@ -14,17 +14,16 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-body { 
-  padding-top: 60px;
-  padding-left: 20px;
-}
-
 #search_form .controls {
   padding-right: 10px;
 }
 
 #search_form #lookup_options {
   width: 100%;
+}
+
+.jumbotron {
+  padding: 40px 0;
 }
 
 div.product-header {
