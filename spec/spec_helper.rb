@@ -58,9 +58,12 @@ RSpec.configure do |config|
   end
 end
 
-# set javascript driver for capybara
-Capybara.register_driver :iphone do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :iphone)
-end
+###########################################################
+# Settings for iPhone driver
 
-Capybara.javascript_driver = :iphone
+#Capybara.register_driver :iphone do |app|
+#  Capybara::Selenium::Driver.new(app, :browser => :iphone)
+#end
+
+#Capybara.javascript_driver = :iphone
+###########################################################

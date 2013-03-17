@@ -16,6 +16,7 @@
 .redcar
 .redcar/**/*
 .rvmrc
+*.swp
 
 # Mac files
 .DS_Store
