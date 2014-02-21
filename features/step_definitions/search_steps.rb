@@ -29,8 +29,8 @@ end
 
 Then /^contains the app icon "(.*?)"$/ do |arg1|
   within("div.product-header") do
-#    page.should have_content(arg1)
-    page.should have_css("img", src: arg1)
+    # page.should have_css("img", src: arg1)
+    page.should have_css("img[alt='#{ arg1 }']")
   end
 end
 
