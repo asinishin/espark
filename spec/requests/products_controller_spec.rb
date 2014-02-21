@@ -37,7 +37,7 @@ describe ProductsController do
         page.execute_script("$(\"a.ui-corner-all:contains('yelp')\").mouseover().click();")
 
         within("div#product_details") do
-          page.should have_css("img", src: favorite_product.artwork_url_60)
+          page.should have_css("img[alt='#{ favorite_product.artwork_url_60 }']")
         end
       end
     end

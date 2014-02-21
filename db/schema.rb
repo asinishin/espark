@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(:version => 20120704005511) do
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
   create_table "tags", :force => true do |t|
-    t.string   "tag_id",     :limit => 30
-    t.string   "name",       :limit => 30
+    t.string   "tag_id",     :limit => 80
+    t.string   "name",       :limit => 28
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end

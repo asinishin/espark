@@ -20,7 +20,7 @@ RSpec.configure do |c|
   c.extend VCR::RSpec::Macros
   # so we can use `:vcr` rather than `:vcr => true`;
   # in RSpec 3 this will no longer be necessary.
-#  c.treat_symbols_as_metadata_keys_with_true_values = true
+  #  c.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -37,7 +37,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-#  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  #  config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -55,6 +55,13 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+end
+
+module ::RSpec::Core
+  class ExampleGroup
+    include Capybara::DSL
+    include Capybara::RSpecMatchers
   end
 end
 

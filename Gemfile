@@ -3,10 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 group :test do
-  gem 'rspec-rails',        '~> 2.9.0'
-  gem 'cucumber-rails',     '~> 1.3.0'
-  gem 'capybara',           '~> 1.1.2'
-  gem 'selenium-webdriver', '~> 2.27.2'
+  gem 'rspec-rails',        '~> 2.14.1'
+  gem 'cucumber-rails',     '~> 1.4.0'
+  gem 'capybara',           '~> 2.2.1'
+  gem 'selenium-webdriver', '~> 2.40.0'
   gem 'database_cleaner',   '~> 0.7.2'
   gem 'vcr',                '~> 1.11.3'
   gem 'fakeweb',            '~> 1.3.0'
@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'pg'
 gem 'delayed_job_active_record'
 gem 'daemons'
