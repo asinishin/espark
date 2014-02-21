@@ -20,3 +20,10 @@
 
 # Mac files
 .DS_Store
+
+# Idea IDE
+.idea/*
+
+# RVM files
+.ruby-gemset
+.ruby-version
